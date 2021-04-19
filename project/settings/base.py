@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'home',
     'search',
     'todo',
+    'corsheaders',
+    'rest_framework',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -61,6 +63,9 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -172,3 +177,8 @@ DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
 INSTALLED_APPS.append('webpack_loader')
 STATICFILES_DIRS.append(os.path.join(BASE_DIR, 'frontend/build'))
 WEBPACK_LOADER = { 'MANIFEST_FILE': os.path.join(BASE_DIR, 'frontend/build/manifest.json'), }
+
+# https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
+CORS_ORIGIN_WHITELIST = [
+     'http://localhost:3000'
+]

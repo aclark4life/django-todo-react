@@ -8,6 +8,12 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
 
+from rest_framework import routers
+from todo import views
+
+router = routers.DefaultRouter()
+router.register(r'todos', views.TodoView, 'todo')
+
 urlpatterns = [
     path('django-admin/', admin.site.urls),
 
@@ -15,6 +21,8 @@ urlpatterns = [
     path('documents/', include(wagtaildocs_urls)),
 
     path('search/', search_views.search, name='search'),
+
+    path('api/', include(router.urls)),
 
 ]
 
