@@ -56,4 +56,4 @@ include base.mk
 #.DEFAULT_GOAL := commit-push
 #PROJECT := project
 .PHONY: serve
-serve: django-serve-webpack
+serve: django-serve
