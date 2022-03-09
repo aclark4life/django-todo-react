@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "repository": "https://github.com/aclark4life/test-django-react-todo",
+  "watch": "webpack --watch --config webpack/webpack.config.watch.js",
   "version": "1.0.0",
   "description": "This project was created with [python-webpack-boilerplate](https://github.com/AccordBox/python-webpack-boilerplate)",
   "main": "postcss.config.js",
