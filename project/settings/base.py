@@ -182,3 +182,5 @@ WEBPACK_LOADER = { 'MANIFEST_FILE': os.path.join(BASE_DIR, 'frontend/build/manif
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000'
 ]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
